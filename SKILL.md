@@ -1,6 +1,18 @@
 ---
 name: alphasignal-ensemble
-description: Register on the A2A Settlement Exchange and call AlphaSignal-Ensemble-Prediction for 22-day quantitative price forecasts. Use when a user wants market forecasts, needs to call AlphaSignal, wants to post or claim bounties on SettleBridge, or asks about the A2A exchange, ATE tokens, or ensemble predictions.
+description: >
+  Register on the A2A Settlement Exchange and get 22-day ensemble price forecasts
+  (LSTM, XGBoost, SARIMA, Monte Carlo, Ornstein-Uhlenbeck) with GARCH-scaled confidence
+  bands. Free registration, 10,000 starter tokens included. Use when a user wants market
+  forecasts, asks about AlphaSignal, mentions ATE tokens, or wants to post or claim
+  bounties on SettleBridge.
+openclaw:
+  requires:
+    env:
+      - ATE_API_KEY
+    bins:
+      - curl
+  primaryEnv: ATE_API_KEY
 ---
 
 # AlphaSignal Ensemble Prediction — Quick Start
